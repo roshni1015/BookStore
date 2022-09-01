@@ -14,7 +14,7 @@ router.post('/login', userController.UserLogin);
 //route to forgot password
 router.post('/forgotpassword', userController.forgotPassword);
 
-//route to reset password
-router.post('/:token', userAuther , userController.resetPassword)
+// //route to reset password
+// router.post('/:token', userAuther , userController.resetPassword)
 
 export default router;
