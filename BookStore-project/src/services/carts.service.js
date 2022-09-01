@@ -29,3 +29,7 @@ export const AddCart = async (_id, body) => {
     }
 }
 
+export const getCart = async(EmailID) =>{
+    const getbook = await Cart.findOne({userId: EmailID})
+    return getbook;
+}
