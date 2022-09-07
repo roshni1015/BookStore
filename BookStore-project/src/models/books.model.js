@@ -1,35 +1,35 @@
 import { Schema, model } from 'mongoose';
 
-const booksSchema = new Schema(
-    {
-      description: {
-        type: String
-      },
-      discountPrice: {
-        type: Number
-      },
-      bookImage: {
-        type: String
-      },
-      admin_user_id: {
-        type: String
-      },
-      bookName: {
-        type: String
-      },
-      author: {
+const bookSchema = new Schema(
+  {
+    description: {
+      type: String,
+      required: true,
+    },
+    bookImage: {
+      type: String,
+      required: true,
+    },
+    bookName: {
+      type: String,
+      required:true,
+    },
+    author:{
         type: String,
-      },
-      quantity: {
-        type: Number
-      },
-      price: {
-        type: Number
-      }
-      },
+      required:true,
+    },
+    quantity:{
+        type : Number,
+        required: true,
+    },
+    price:{
+        type : Number,
+        required: true,
+    },
+  },
   {
     timestamps: true
   }
 );
 
-export default model('Book', booksSchema);
+export default model('Book', bookSchema);

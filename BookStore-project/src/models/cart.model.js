@@ -5,7 +5,7 @@ const cartSchema = new Schema(
     userId: {
         type: String
     },
-    book: [{
+    books: [{
     productId: {
         type: String
     },
@@ -19,7 +19,8 @@ const cartSchema = new Schema(
         type: String
     },
     quantity: {
-        type: Number
+        type: Number,
+        
     },
     price: {
         type: Number
@@ -38,4 +39,4 @@ const cartSchema = new Schema(
   }
 );
 
-export default model('Cart', cartSchema);
+export default model('cart', cartSchema);
